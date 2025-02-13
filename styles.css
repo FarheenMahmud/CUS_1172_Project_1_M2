@@ -1,0 +1,122 @@
+/* General Styles */
+body {
+    background-color: #24262e;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+}
+
+/* Container */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Header & Navigation */
+.Top-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #24262e;
+    padding: 20px;
+    width: 100%;
+}
+
+.upper-half {
+    display: flex;
+    justify-content: center;
+    background-color: #24262e;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.right-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.right-links li {
+    margin: 0 15px;
+}
+
+.right-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Sections */
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f0f0f0;
+    margin: 20px auto;
+    width: 60%;
+    border-radius: 10px;
+    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Quote-section {
+    background-color: #e5e7eb;
+}
+
+.Bottom-section {
+    background-color: white;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    width: 180px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+/* Links */
+a {
+    color: black; /* Set default link color to black */
+    text-decoration: underline; /* Underline all links */
+}
+
+a:visited {
+    color: purple; /* Change color to purple for visited links */
+}
+
+a:hover {
+    color: darkblue; /* Change color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .section {
+        width: 90%; /* Wider for smaller screens */
+    }
+
+    .right-links {
+        flex-direction: column; /* Stack links vertically */
+    }
+}
+
+@media print {
+    body {
+        background-color: white;
+        color: black; /* Change text color for print */
+    }
+
+    .section {
+        box-shadow: none; /* Remove shadow in print */
+    }
+}
