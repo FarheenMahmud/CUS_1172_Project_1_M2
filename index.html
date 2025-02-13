@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Page</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        
         h1 {
             color: #ffcc00; 
         }
@@ -17,35 +17,41 @@
 </head>
 <body>
     <header class="Top-section">
-        <h1 id="main_title"><span style="color: rgb(216, 6, 6); font-weight: bold;">Welcome to My Page</span></h1>
+        <h1 id="main_title"><span style="color: rgb(216, 160, 6); font-weight: bold;">Welcome to My Page</span></h1>
     </header>
 
-    <nav class="upper-half">
-        <ul class="right-links">
-            <li><a href="#Profile">Profile</a></li>
-            <li><a href="#Education">Education</a></li>
-            <li><a href="#Experience">Experience</a></li>
-            <li><a href="#ProgrammingSkills">Programming Skills</a></li>
-            <li><a href="#GeneralInterests">General Interests</a></li>
-            <li><a href="#FavoriteThings">Favorite Things</a></li>
-            <li><a href="#FavoriteWebsite">Favorite Website</a></li>
-            <li><a href="#MyProjects">My Projects</a></li>
+    <nav class="upper-half navbar navbar-expand-lg navbar-dark">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="#Profile">Profile</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Education">Education</a></li>
+            <li class="nav-item"><a class="nav-link" href="#Experience">Experience</a></li>
+            <li class="nav-item"><a class="nav-link" href="#ProgrammingSkills">Programming Skills</a></li>
+            <li class="nav-item"><a class="nav-link" href="#GeneralInterests">General Interests</a></li>
+            <li class="nav-item"><a class="nav-link" href="#FavoriteThings">Favorite Things</a></li>
+            <li class="nav-item"><a class="nav-link" href="#FavoriteWebsite">Favorite Website</a></li>
+            <li class="nav-item"><a class="nav-link" href="#MyProjects">My Projects</a></li>
         </ul>
     </nav>
 
-    <div id="Profile" class="section">
+    <div id="Profile" class="section container mt-5">
         <h2><u>Profile</u></h2>
-        <img src="pfp.jpg" alt="Profile Picture" width="180" height="300">
-        <p>Hello! I'm <span style="font-weight: bold;">Farheen</span>, an aspiring Web Developer and Designer.<br>
-        I'm a senior at St John's University majoring in Computer Science.</p>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="pfp.jpg" alt="Profile Picture" class="img-fluid rounded">
+            </div>
+            <div class="col-md-8">
+                <p>Hello! I'm <span style="font-weight: bold;">Farheen</span>, an aspiring Web Developer and Designer.<br>
+                I'm a senior at St John's University majoring in Computer Science.</p>
+            </div>
+        </div>
     </div>
 
-    <div id="Education" class="section">
+    <div id="Education" class="section container">
         <h2><u>Education</u></h2>
         <p>Senior at St. John's University, on track for BS in Computer Science.</p>
     </div>
 
-    <div id="Experience" class="section">
+    <div id="Experience" class="section container">
         <h2><u>Work Experience</u></h2>
         <ul>
             <li>Freelance Web Design Work</li>
@@ -53,9 +59,9 @@
         </ul>
     </div>
 
-    <div id="ProgrammingSkills" class="section">
+    <div id="ProgrammingSkills" class="section container">
         <h2><u>Programming Skills</u></h2>
-        <table>
+        <table class="table table-striped">
             <tr><th><u>Language</u></th><th><u>Experience Level</u></th></tr>
             <tr><td>HTML</td><td>Intermediate</td></tr>
             <tr><td>CSS</td><td>Intermediate</td></tr>
@@ -63,13 +69,13 @@
         </table>
     </div>
 
-    <div id="GeneralInterests" class="section">
+    <div id="GeneralInterests" class="section container">
         <h2><u>General Interests</u></h2>
         <p>I like to do a little trolling. I also enjoy 3D modelling, drawing, reading, and writing.</p>
-        <img src="https://upload.wikimedia.org/wikipedia/en/7/73/Trollface.png" alt="Trollface" width="300" height="200">
+        <img src="https://upload.wikimedia.org/wikipedia/en/7/73/Trollface.png" alt="Trollface" class="img-fluid">
     </div>
 
-    <div id="FavoriteThings" class="Quote-section section">
+    <div id="FavoriteThings" class="Quote-section section container">
         <h2><u>Some of My Favorite Things</u></h2>
         <h3>Favorite Song</h3>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/nWcumyt9ruE" allowfullscreen></iframe>
@@ -81,14 +87,14 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/mJpNmYeooQE" allowfullscreen></iframe>
     </div>
 
-    <section id="FavoriteWebsite" class="Quote-section section">
+    <section id="FavoriteWebsite" class="Quote-section section container">
         <h2><u>My Favorite Website</u></h2>
         <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer">
             Click here!
         </a>
     </section>
 
-    <section id="MyProjects" class="Bottom-section section">
+    <section id="MyProjects" class="Bottom-section section container">
         <h2><u>My Projects</u></h2>
         <a href="https://github.com/FarheenMahmud/CUS_1172_Project1" target="_blank" rel="noopener noreferrer">
             View Projects
@@ -98,8 +104,12 @@
     <form onsubmit="event.preventDefault();" method="post">
         <h2>Name</h2>
         <h3>HMU so I can beat you in Fortnite :P</h3>
-        <input type="text" name="username" placeholder="Enter your name" required>
-        <button type="submit">Submit</button>
+        <input type="text" name="username" placeholder="Enter your name" required class="form-control mb-3">
+        <button type="submit" class="btn btn-primary">Submit</button>
     </form>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>
